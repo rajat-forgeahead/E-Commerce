@@ -15,7 +15,7 @@ export const CartProducts = ({cartCounter, setCartCounter}) => {
                 {/* Product and Cart Details */}
                 <div className="flex flex-col text-dark-grayish-blue">
                     <span>Fall Limited Edition Sneakers</span>
-                    <span>$125.00 x {cartCounter} <strong className="text-black">${cartValue}</strong> </span>
+                    <span>$125.00 x {cartCounter} <strong className="text-black">${cartValue}.00</strong> </span>
                 </div>
             </div>
             <div>
