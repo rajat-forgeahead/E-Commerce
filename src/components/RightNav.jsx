@@ -14,12 +14,12 @@ export const RightNav = ({toggleShowCart, cartCounter}) => {
             }
             {/* Cart Image */}
             <div>
-                <img className='w-full' src="../images/icon-cart.svg" alt="" />
+                <img className='w-full' src="./images/icon-cart.svg" alt="" />
             </div>
         </button>
         {/* Avatar */}
         <div className='w-6 md:w-12'>
-            <img className='' src="../images/image-avatar.png" alt="" />
+            <img className='' src="./images/image-avatar.png" alt="" />
         </div>
 
     </div>

@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react"
 
 const thumbnails = [
-  '../images/image-product-1-thumbnail.jpg',
-  '../images/image-product-2-thumbnail.jpg',
-  '../images/image-product-3-thumbnail.jpg',
-  '../images/image-product-4-thumbnail.jpg'
+  './images/image-product-1-thumbnail.jpg',
+  './images/image-product-2-thumbnail.jpg',
+  './images/image-product-3-thumbnail.jpg',
+  './images/image-product-4-thumbnail.jpg'
 ]
 
 export function Carousel({
@@ -38,13 +38,13 @@ export function Carousel({
             onClick={prev}
             className="bg-white rounded-full p-3 md:hidden"
           >
-            <img className="h-[10px] w-[10px]" src="../images/icon-previous.svg" alt="" />
+            <img className="h-[10px] w-[10px]" src="./images/icon-previous.svg" alt="" />
           </button>
           <button
             onClick={next}
             className="bg-white rounded-full p-3 md:hidden"
           >
-            <img className="h-[10px] w-[10px]" src="../images/icon-next.svg" alt="" />
+            <img className="h-[10px] w-[10px]" src="./images/icon-next.svg" alt="" />
           </button>
         </div>
         {/* <div className="absolute bottom-4 right-0 left-0">

@@ -13,7 +13,7 @@ export const Navigation = () => {
         <div className='flex items-center gap-5 md:gap-0'>
             {/* Hamburger Menu */}
             <button onClick={ toggleSideBarOpen }>
-                <img className="pt-1 md:hidden" src="../images/icon-menu.svg" alt="" />
+                <img className="pt-1 md:hidden" src="./images/icon-menu.svg" alt="" />
             </button>
             {
                 sideBarOpen && (
@@ -21,7 +21,7 @@ export const Navigation = () => {
                 )
             }
             {/* Logo */}
-            <img src="../images/logo.svg" alt="" />
+            <img src="./images/logo.svg" alt="" />
             {/* Sections */}
             <div id="sections" className='hidden md:flex items-center pt-1 gap-6 text-dark-grayish-blue'>
                 <a href="#">Collections</a>

@@ -11,7 +11,7 @@ export const CartProducts = ({cartCounter, setCartCounter}) => {
         <div className="flex flex-row gap-2 items-center justify-between">
             {/* Product Thumbnail */}
             <div className="h-12 flex gap-4">
-                <img className="max-h-full rounded-md" src="../images/image-product-1-thumbnail.jpg" alt="" />
+                <img className="max-h-full rounded-md" src="./images/image-product-1-thumbnail.jpg" alt="" />
                 {/* Product and Cart Details */}
                 <div className="flex flex-col text-dark-grayish-blue">
                     <span>Fall Limited Edition Sneakers</span>
