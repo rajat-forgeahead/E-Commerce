@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Sidebar } from "./Sidebar";
 
 export const Navigation = () => {
 
@@ -9,38 +10,25 @@ export const Navigation = () => {
     }
 
     return (
-        <div className='flex items-center gap-5'>
+        <div className='flex items-center gap-5 md:gap-0'>
             {/* Hamburger Menu */}
             <button onClick={ toggleSideBarOpen }>
-                <img className="md:hidden" src="../images/icon-menu.svg" alt="" />
+                <img className="pt-1 md:hidden" src="../images/icon-menu.svg" alt="" />
             </button>
             {
                 sideBarOpen && (
-                    <div className="flex">
-                        <div className='fixed flex flex-col gap-6 top-0 left-0 z-10 h-screen bg-white p-5 w-2/3 font-bold'>
-                            <button onClick={ toggleSideBarOpen }
-                            className='mb-6 mt-1'>
-                                <img src="../images/icon-close.svg" alt="" />
-                            </button>
-                            <a href="#">Collections</a>
-                            <a href="#">Men</a>
-                            <a href="#">Women</a>
-                            <a href="#">About</a>
-                            <a href="#">Contact</a>
-                        </div>
-                        <div className='fixed top-0 bottom-0 right-0 z-10 w-1/3 bg-black-75 bg-opacity-75'></div>
-                    </div>
+                    <Sidebar toggleSideBarOpen={toggleSideBarOpen}/>
                 )
             }
             {/* Logo */}
             <img src="../images/logo.svg" alt="" />
             {/* Sections */}
-            <div className='hidden md:block'>
-                Collections
-                Men
-                Women
-                About
-                Contact
+            <div id="sections" className='hidden md:flex items-center pt-1 gap-6 text-dark-grayish-blue'>
+                <a href="#">Collections</a>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
             </div>
         </div>
     )

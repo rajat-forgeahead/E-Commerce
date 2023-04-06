@@ -1,11 +1,11 @@
 import { CartProducts } from "./CartProducts";
 
-export const CartCard = ({showCart, cartCounter}) => {
+export const CartCard = ({showCart, cartCounter, setCartCounter}) => {
   return (
     <>
         {
             showCart && (
-                <div className='absolute p-2 w-full z-50 rounded-xl'>
+                <div className='absolute p-2 w-full z-50 rounded-xl md:max-w-md left-0 right-0 mx-auto'>
                     <div className='flex flex-col w-full bg-white border-black rounded-xl shadow-2xl'>
 
                         {/* Cart span */}
@@ -17,11 +17,13 @@ export const CartCard = ({showCart, cartCounter}) => {
                         <div className='p-5'>
                             {
                                 (cartCounter === 0) 
+                                    // Display if your cart is empty
                                     ? (<div className="flex h-36 justify-center items-center">
                                             <span className="font-bold text-dark-grayish-blue text-lg">Your cart is empty.</span>
                                        </div>
                                     )
-                                    : (<CartProducts cartCounter={cartCounter} />)
+                                    // Display if your cart has some products
+                                    : (<CartProducts cartCounter={cartCounter} setCartCounter={setCartCounter}/>)
                             }
                         </div>
                     </div>
