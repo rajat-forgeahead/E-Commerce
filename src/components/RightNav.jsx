@@ -4,7 +4,7 @@ export const RightNav = ({toggleShowCart, cartCounter}) => {
   return (
     <div className='flex gap-5 relative'>
         {/* Cart */}
-        <div className='w-6 my-auto relative flex items-center'>
+        <button onClick={ toggleShowCart } className='w-6 my-auto relative flex items-center'>
             {/* Amount of Products in Cart */}
             {
                 cartCounter !== 0
@@ -13,12 +13,10 @@ export const RightNav = ({toggleShowCart, cartCounter}) => {
                     )
             }
             {/* Cart Image */}
-            <button
-                onClick={ toggleShowCart }
-            >
+            <div>
                 <img className='w-full' src="../images/icon-cart.svg" alt="" />
-            </button>
-        </div>
+            </div>
+        </button>
         {/* Avatar */}
         <div className='w-6 md:w-12'>
             <img className='' src="../images/image-avatar.png" alt="" />
